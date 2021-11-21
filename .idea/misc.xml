@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5333333333333333" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/drawable/background.xml" value="0.5370370370370371" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/drawable/background_selected.xml" value="0.5398148148148149" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5333333333333333" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/drawable/itemlist_background.xml" value="0.5398148148148149" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/layout/activity_main.xml" value="0.334375" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/layout/fragment_detail.xml" value="0.33" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/layout/fragment_main.xml" value="0.27178318135764945" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/layout/item_transactionlist.xml" value="0.338768115942029" />
+        <entry key="..\:/Users/trist/Documents/1. Work/Android Studio/TransactionAssessment/app/src/main/res/layout/itemlist_transaction.xml" value="0.33559782608695654" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_main_start_margin">8dp</dimen>
+    <dimen name="dimen_all_start_margin">16dp</dimen>
+    <dimen name="dimen_main_end_margin">8dp</dimen>
+    <dimen name="dimen_all_end_margin">16dp</dimen>
+    <dimen name="dimen_background_margin">8dp</dimen>
+    <dimen name="dimen_background_bottom_margin">64dp</dimen>
+    <dimen name="dimen_match_constraint">0dp</dimen>
+    <dimen name="dimen_small_text_space">8dp</dimen>
+    <dimen name="dimen_textsize_large">24sp</dimen>
+    <dimen name="dimen_textsize_med">16sp</dimen>
+</resources>

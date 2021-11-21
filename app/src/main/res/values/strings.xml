@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Transaction Assessment</string>
+    <string name="debit_text">Debit</string>
+    <string name="credit_text">Credit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date_title">Date</string>
+    <string name="time_title">Time</string>
+    <string name="type_title">Transaction Type</string>
+    <string name="gst_title">GST</string>
+</resources>

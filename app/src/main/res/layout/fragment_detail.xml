@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.transactionassessment.ui.shared.TransactionViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/background_detail"
+            android:layout_width="@dimen/dimen_match_constraint"
+            android:layout_height="@dimen/dimen_match_constraint"
+            android:layout_marginStart="@dimen/dimen_background_margin"
+            android:layout_marginTop="@dimen/dimen_background_margin"
+            android:layout_marginEnd="@dimen/dimen_background_margin"
+            android:layout_marginBottom="@dimen/dimen_background_bottom_margin"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_detail_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_all_start_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/dimen_all_end_margin"
+            android:text="@{viewModel.selectedTransaction.summary}"
+            android:textSize="@dimen/dimen_textsize_med"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/background_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/background_detail"
+            app:layout_constraintTop_toTopOf="@id/background_detail"
+            tools:text="Summary" />
+
+        <TextView
+            android:id="@+id/tv_detail_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="@dimen/dimen_textsize_large"
+            android:textStyle="bold"
+            app:creditAmount="@{viewModel.selectedTransaction.credit}"
+            app:debitAmount="@{viewModel.selectedTransaction.debit}"
+            app:layout_constraintEnd_toEndOf="@id/background_detail"
+            app:layout_constraintStart_toStartOf="@id/background_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_summary"
+            tools:text="Amount" />
+
+        <TextView
+            android:id="@+id/tv_detail_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_all_start_margin"
+            android:layout_marginTop="16dp"
+            android:text="@string/date_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/background_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_amount" />
+
+        <TextView
+            android:id="@+id/tv_detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small_text_space"
+            android:text="@string/time_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_date" />
+
+        <TextView
+            android:id="@+id/tv_detail_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small_text_space"
+            android:text="@string/type_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_time" />
+
+        <TextView
+            android:id="@+id/tv_detail_gst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small_text_space"
+            android:text="@string/gst_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_type"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_type" />
+
+        <TextView
+            android:id="@+id/tv_datevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_all_end_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_detail_date"
+            app:layout_constraintEnd_toEndOf="@id/background_detail"
+            app:layout_constraintTop_toTopOf="@+id/tv_detail_date"
+            app:transactionDate="@{viewModel.selectedTransaction.transactionDate}"
+            tools:text="-date-" />
+
+        <TextView
+            android:id="@+id/tv_timevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_detail_time"
+            app:layout_constraintEnd_toEndOf="@+id/tv_datevalue"
+            app:layout_constraintTop_toTopOf="@+id/tv_detail_time"
+            app:transactionTime="@{viewModel.selectedTransaction.transactionDate}"
+            tools:text="-time-" />
+
+        <TextView
+            android:id="@+id/tv_typevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:creditType="@{viewModel.selectedTransaction.credit}"
+            app:debitType="@{viewModel.selectedTransaction.debit}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_detail_type"
+            app:layout_constraintEnd_toEndOf="@+id/tv_datevalue"
+            app:layout_constraintTop_toTopOf="@+id/tv_detail_type"
+            tools:text="-type-" />
+
+        <TextView
+            android:id="@+id/tv_gstvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:creditGst="@{viewModel.selectedTransaction.credit}"
+            app:debitGst="@{viewModel.selectedTransaction.debit}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_detail_gst"
+            app:layout_constraintEnd_toEndOf="@+id/tv_typevalue"
+            app:layout_constraintTop_toTopOf="@+id/tv_detail_gst"
+            tools:text="-gst-" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
